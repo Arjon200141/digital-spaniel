@@ -11,7 +11,6 @@ You can view the live demo at:
 - **Sticky Navigation:** Header hides on scroll down and reappears on scroll up  
 - **Responsive Menu:** Full desktop menu collapses to hamburger menu on mobile/tablet  
 - **Interactive Elements:**  
-  - Hover animations for links and buttons  
   - Tabbed project slider with custom animations  
   - Case studies slider with active state  
   - Masonry gallery layout  
@@ -19,7 +18,6 @@ You can view the live demo at:
 
 ## Modern Tech Stack
 - React 19 with Vite  
-- TypeScript (to be implemented)  
 - Redux Toolkit for state management  
 - TailwindCSS with DaisyUI for styling  
 
@@ -29,7 +27,6 @@ You can view the live demo at:
 - **Styling:** TailwindCSS, DaisyUI  
 - **Build Tool:** Vite  
 - **Linting:** ESLint  
-- **Animation:** React Spring (to be implemented)  
 - **Sliders:** Swiper.js  
 
 ## Installation
