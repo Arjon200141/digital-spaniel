@@ -1,4 +1,4 @@
-# Digital Spaniel Agency
+# Digital Spaniel
 
 ## Project Overview
 This is a responsive homepage for the Digital Spaniel Agency, built with React and modern frontend technologies. The project implements the design from the provided Adobe XD specification with interactive elements and responsive behavior.
