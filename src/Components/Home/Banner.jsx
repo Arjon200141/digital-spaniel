@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Banner = () => {
     return (
-        <div className='relative lg:px-64 p-10 flex lg:justify-start justify-center items-center'>
+        <div className='relative lg:px-44 p-10 flex lg:justify-start justify-center items-center'>
             <div className='lg:w-1/2 w-full absolute right-0 top-0 -z-10'>
                 <img src="https://i.ibb.co.com/6R9xzVpZ/Spaniel01-gradient.png" alt="" />
             </div>
