@@ -3,9 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer className="bg-[#EDEFF1] text-base-content">
-            {/* Top Footer Section */}
             <div className="max-w-[1440px] mx-auto flex flex-wrap justify-between py-20 px-10 md:px-44 gap-y-16">
-                {/* Brand & Contact */}
                 <aside className="flex flex-col max-w-xs">
                     <h2 className="text-4xl font-medium mb-6 leading-snug">
                         We're a brands
@@ -18,7 +16,6 @@ const Footer = () => {
 
                 </aside>
 
-                {/* Navigation Sections */}
                 <nav className="flex flex-wrap gap-x-20 gap-y-6 font-medium text-lg">
                     <section>
                         <h3 className="footer-title uppercase mb-6">Explore</h3>
@@ -65,7 +62,6 @@ const Footer = () => {
                 </nav>
             </div>
 
-            {/* Bottom Footer Section */}
             <div className="bg-[#EDEFF1] text-[#506473] pb-6 px-10 md:px-44 flex flex-col md:flex-row items-center justify-between max-w-[1440px] mx-auto gap-4">
                 <aside className="">
                     <p className="text-gray-700 text-sm select-none">
@@ -73,7 +69,6 @@ const Footer = () => {
                     </p>
                 </aside>
 
-                {/* Social Links */}
                 <nav className="flex gap-6">
                     <a
                         href="https://twitter.com"

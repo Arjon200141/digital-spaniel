@@ -2,8 +2,6 @@ import { useState } from 'react';
 
 const Capability = () => {
     const [activeItem, setActiveItem] = useState(null);
-
-    // Only "Brand Strategy" will trigger the heading color change
     const handleItemHover = (item) => {
         if (item === 'Brand Strategy') {
             setActiveItem(item);
@@ -16,7 +14,6 @@ const Capability = () => {
         setActiveItem(null);
     };
 
-    // Base color classes
     const baseHeadingColor = 'text-black';
     const baseSpanColor = 'text-[#506473]';
     const activeColor = 'text-primary';
@@ -24,7 +21,6 @@ const Capability = () => {
     return (
         <section className="mb-20 bg-[#EDEFF1] text-base-content">
             <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row flex-wrap justify-between py-16 px-6 sm:px-10 md:px-20 lg:px-44 gap-y-12 md:gap-y-16">
-                {/* Brand & Contact */}
                 <aside className="flex flex-col max-w-xs">
                     <h2
                         className={`text-4xl font-medium mb-6 leading-snug transition-colors duration-300 ${activeItem === 'Brand Strategy' ? activeColor : baseHeadingColor
@@ -52,7 +48,6 @@ const Capability = () => {
                     </a>
                 </aside>
 
-                {/* Navigation Sections */}
                 <nav className="flex flex-wrap gap-x-12 gap-y-8 font-medium text-lg">
                     <section className="min-w-[160px]">
                         <h3 className="uppercase text-black font-semibold tracking-wide mb-4">

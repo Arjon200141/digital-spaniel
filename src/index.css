@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.banner1 {
+  text-align: left;
+  font: normal normal Open Sans;
+  letter-spacing: 0.8px;
+  color: #C0345E;
+  opacity: 0.75;
+}
+
+.banner2 {
+  font: normal normal bold Avant Garde Gothic Pro;
+  letter-spacing: 0px;
+  color: #19293A;
+}
