@@ -38,26 +38,7 @@ cd digital-spaniel
 npm install
 npm run dev
 npm run build
-
-
-digital-spaniel/
-├── public/               
-├── src/
-│   ├── assets/           
-│   ├── components/       
-│   ├── features/         
-│   ├── hooks/            
-│   ├── pages/            
-│   ├── store/           
-│   ├── types/            
-│   ├── utils/          
-│   ├── App.tsx           
-│   └── main.tsx        
-├── .eslintrc.cjs        
-├── postcss.config.js     
-├── tailwind.config.js   
-├── tsconfig.json         
-└── vite.config.ts     
+ 
 
 ## State Management
 The project uses Redux Toolkit for global state management with the following features:
