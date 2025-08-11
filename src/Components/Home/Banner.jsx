@@ -8,7 +8,7 @@ const Banner = () => {
                 <img src="https://i.ibb.co.com/6R9xzVpZ/Spaniel01-gradient.png" alt="" />
             </div>
 
-            <div className=' lg:min-h-screen lg:px-0 px-10   lg:relative absolute z-50 top-[54vh] lg:top-0 lg:w-1/2 lg:pt-24 flex justify-center items-center text-center lg:text-start'>
+            <div className=' lg:min-h-screen lg:px-0 px-10 lg:relative absolute z-50 top-[32vh] lg:top-0 lg:w-1/2 lg:pt-24 flex justify-center items-center text-center lg:text-start'>
                 <div className='bg-white/50 rounded lg:shadow-none shadow-md py-10 lg:block flex flex-col justify-center items-center'>
                     <p className='w-fit banner1 font-semibold'>
                         BRAND, DEV, ECOM, MARKETING

@@ -49,13 +49,13 @@ const Footer = () => {
                                 <a href="tel:+0121345678" className="link link-hover hover:text-primary transition">
                                     Call Us
                                 </a>
-                                <p className="mt-1">0121 345 678</p>
+                                <p className="mt-1 ml-1 text-[#506473]">0121 345 678</p>
                             </li>
                             <li>
                                 <a href="mailto:info@digitalspaniel.co.uk" className="link link-hover hover:text-primary transition">
                                     Email Us
                                 </a>
-                                <p className="mt-1">info@digitalspaniel.co.uk</p>
+                                <p className="mt-1 ml-1 text-[#506473]">info@digitalspaniel.co.uk</p>
                             </li>
                         </ul>
                     </section>

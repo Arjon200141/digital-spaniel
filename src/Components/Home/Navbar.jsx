@@ -6,7 +6,6 @@ const Navbar = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
 
-    // Handle scroll for hide/show navbar
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollPos = window.pageYOffset;
@@ -18,7 +17,6 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [prevScrollPos]);
 
-    // Close mobile menu when clicking a link
     const closeMobileMenu = () => {
         setIsOpen(false);
     };
@@ -35,7 +33,6 @@ const Navbar = () => {
         <nav className={`fixed  w-full lg:px-32 px-5 transition-all duration-300 z-50 ${visible ? 'top-0' : '-top-24'}`}>
             <div className="container  px-4 py-3">
                 <div className="flex justify-between items-center">
-                    {/* Logo */}
                     <div>
                         <img
                             className="w-32 md:w-40"
@@ -43,7 +40,6 @@ const Navbar = () => {
                             alt="Digital Spaniel Logo"
                         />
                     </div>
-                    {/* Desktop Navigation */}
                     <div className="hidden md:block px-5">
                         <ul className="flex space-x-6 lg:space-x-12">
                             {navItems.map((item) => (
@@ -63,7 +59,6 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    {/* Mobile menu button */}
                     <div className="md:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
@@ -96,8 +91,6 @@ const Navbar = () => {
                         </button>
                     </div>
                 </div>
-
-                {/* Mobile Navigation */}
                 <div
                     className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 py-4' : 'max-h-0'
                         }`}

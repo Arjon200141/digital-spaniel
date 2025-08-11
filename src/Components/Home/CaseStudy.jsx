@@ -51,7 +51,7 @@ const CaseStudy = () => {
   }, [prevRef, nextRef, swiperRef]);
 
   return (
-    <section className="py-12 bg-white w-full">
+    <section className="py-12 bg-white w-full overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4">
         <h2 className="text-4xl font-medium text-center mb-6">Case Studies</h2>
         <p className="max-w-2xl mx-auto text-center text-[#506473] mb-12 px-2 sm:px-6">
@@ -59,7 +59,7 @@ const CaseStudy = () => {
           tailoring each project to suit the needs of you and your business.
         </p>
 
-        <div className="relative">
+        <div className="relative w-full">
           <Swiper
             ref={swiperRef}
             effect="coverflow"
@@ -86,10 +86,11 @@ const CaseStudy = () => {
               delay: 4000,
               disableOnInteraction: false,
             }}
-            className="!overflow-visible"
+            className="w-full"
             style={{ 
               height: '400px',
-              padding: '0 60px' // Add padding to ensure slides stay within view
+              padding: '0 20px',
+              margin: '0 -20px' 
             }}
             breakpoints={{
               320: {
@@ -101,6 +102,14 @@ const CaseStudy = () => {
                 },
               },
               640: {
+                slidesPerView: 1.2,
+                spaceBetween: 25,
+                coverflowEffect: {
+                  depth: 100,
+                  modifier: 1,
+                },
+              },
+              768: {
                 slidesPerView: 1.5,
                 spaceBetween: 30,
                 coverflowEffect: {
@@ -108,16 +117,8 @@ const CaseStudy = () => {
                   modifier: 1,
                 },
               },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-                coverflowEffect: {
-                  depth: 100,
-                  modifier: 1,
-                },
-              },
               1024: {
-                slidesPerView: 2.5,
+                slidesPerView: 2,
                 spaceBetween: 40,
                 coverflowEffect: {
                   depth: 150,
@@ -125,7 +126,7 @@ const CaseStudy = () => {
                 },
               },
               1200: {
-                slidesPerView: 3,
+                slidesPerView: 2.5,
                 spaceBetween: 40,
                 coverflowEffect: {
                   depth: 200,
@@ -134,7 +135,6 @@ const CaseStudy = () => {
               },
             }}
             onSwiper={(swiper) => {
-              // Initialize navigation after swiper is initialized
               setTimeout(() => {
                 if (prevRef.current && nextRef.current) {
                   swiper.params.navigation.prevEl = prevRef.current;
@@ -148,7 +148,7 @@ const CaseStudy = () => {
             {caseStudies.map((study, index) => (
               <SwiperSlide 
                 key={study.id} 
-                className="!w-[300px] md:!w-[350px] lg:!w-[400px] !h-[350px] flex justify-center"
+                className="!w-[280px] sm:!w-[320px] md:!w-[350px] lg:!w-[380px] !h-[350px]"
               >
                 <div className="relative w-full h-full">
                   <img
@@ -170,11 +170,10 @@ const CaseStudy = () => {
             ))}
           </Swiper>
 
-          {/* Navigation Buttons */}
-          <div className="absolute top-1/2 left-0 right-0 flex justify-between px-4 -translate-y-1/2 pointer-events-none z-10">
+          <div className="absolute top-1/2 left-0 right-0 flex justify-between -translate-y-1/2 pointer-events-none z-10">
             <button
               ref={prevRef}
-              className="pointer-events-auto bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-800 rounded-full w-10 h-10 flex items-center justify-center focus:outline-none transition-all duration-200 transform hover:scale-110 shadow-lg"
+              className="pointer-events-auto bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-800 rounded-full w-10 h-10 flex items-center justify-center focus:outline-none transition-all duration-200 transform hover:scale-110 shadow-lg ml-2"
               aria-label="Previous Slide"
               type="button"
             >
@@ -182,7 +181,7 @@ const CaseStudy = () => {
             </button>
             <button
               ref={nextRef}
-              className="pointer-events-auto bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-800 rounded-full w-10 h-10 flex items-center justify-center focus:outline-none transition-all duration-200 transform hover:scale-110 shadow-lg"
+              className="pointer-events-auto bg-white bg-opacity-80 hover:bg-opacity-100 text-gray-800 rounded-full w-10 h-10 flex items-center justify-center focus:outline-none transition-all duration-200 transform hover:scale-110 shadow-lg mr-2"
               aria-label="Next Slide"
               type="button"
             >
