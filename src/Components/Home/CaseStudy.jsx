@@ -51,7 +51,7 @@ const CaseStudy = () => {
   }, [prevRef, nextRef, swiperRef]);
 
   return (
-    <section className="py-12 bg-white w-full overflow-hidden">
+    <div id='blog' className="py-12 bg-white w-full overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4">
         <h2 className="text-4xl font-medium text-center mb-6">Case Studies</h2>
         <p className="max-w-2xl mx-auto text-center text-[#506473] mb-12 px-2 sm:px-6">
@@ -96,14 +96,19 @@ const CaseStudy = () => {
               320: {
                 slidesPerView: 1,
                 spaceBetween: 20,
+                centeredSlides: true,
                 coverflowEffect: {
+                  rotate: 0,
+                  stretch: 0,
                   depth: 50,
                   modifier: 1,
+                  slideShadows: false,
                 },
               },
               640: {
                 slidesPerView: 1.2,
                 spaceBetween: 25,
+                centeredSlides: true,
                 coverflowEffect: {
                   depth: 100,
                   modifier: 1,
@@ -112,6 +117,7 @@ const CaseStudy = () => {
               768: {
                 slidesPerView: 1.5,
                 spaceBetween: 30,
+                centeredSlides: false,
                 coverflowEffect: {
                   depth: 100,
                   modifier: 1,
@@ -120,6 +126,7 @@ const CaseStudy = () => {
               1024: {
                 slidesPerView: 2,
                 spaceBetween: 40,
+                centeredSlides: false,
                 coverflowEffect: {
                   depth: 150,
                   modifier: 1.5,
@@ -128,6 +135,7 @@ const CaseStudy = () => {
               1200: {
                 slidesPerView: 2.5,
                 spaceBetween: 40,
+                centeredSlides: false,
                 coverflowEffect: {
                   depth: 200,
                   modifier: 2,
@@ -190,7 +198,7 @@ const CaseStudy = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

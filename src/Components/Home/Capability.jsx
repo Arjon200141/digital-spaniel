@@ -19,7 +19,7 @@ const Capability = () => {
     const activeColor = 'text-primary';
 
     return (
-        <div className="mb-20 bg-[#EDEFF1] text-base-content">
+        <div id='services' className="mb-20 bg-[#EDEFF1] text-base-content">
             <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row flex-wrap justify-between py-16 px-6 sm:px-10 md:px-20 lg:px-44 gap-y-12 md:gap-y-16">
                 <aside className="flex flex-col max-w-xs">
                     <h2

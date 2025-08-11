@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -21,17 +20,27 @@ const Navbar = () => {
         setIsOpen(false);
     };
 
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        closeMobileMenu();
+    };
+
     const navItems = [
-        { name: 'Services', path: '/services' },
-        { name: 'Work', path: '/work' },
-        { name: 'About', path: '/about' },
-        { name: 'Blog', path: '/blog' },
-        { name: 'Contact', path: '/contact' },
+        { name: 'Services', id: 'services' },
+        { name: 'Work', id: 'work' },
+        { name: 'About', id: 'about' },
+        { name: 'Blog', id: 'blog' },
+        { name: 'Contact', id: 'contact' },
     ];
 
     return (
-        <nav className={`fixed  w-full lg:px-32 px-5 transition-all duration-300 z-50 ${visible ? 'top-0' : '-top-24'}`}>
-            <div className="container  px-4 py-3">
+        <nav className={`fixed w-full lg:px-32 px-5 transition-all duration-300 z-50 ${visible ? 'top-0' : '-top-24'}`}>
+            <div className="container px-4 py-3">
                 <div className="flex justify-between items-center">
                     <div>
                         <img
@@ -44,16 +53,13 @@ const Navbar = () => {
                         <ul className="flex space-x-6 lg:space-x-12">
                             {navItems.map((item) => (
                                 <li key={item.name}>
-                                    <NavLink
-                                        to={item.path}
-                                        className={({ isActive }) =>
-                                            `text-lg font-medium transition-colors duration-200 
-                        hover:border-b-2 hover:border-white pb-1
-                        ${isActive ? 'text-white border-b-2 border-white' : 'text-gray-300 hover:text-white'}`
-                                        }
+                                    <button
+                                        onClick={() => scrollToSection(item.id)}
+                                        className="text-lg font-medium transition-colors duration-200 
+                                        hover:border-b-2 hover:border-white pb-1 text-gray-300 hover:text-white"
                                     >
                                         {item.name}
-                                    </NavLink>
+                                    </button>
                                 </li>
                             ))}
                         </ul>
@@ -98,17 +104,13 @@ const Navbar = () => {
                     <ul className="flex flex-col space-y-4 px-2">
                         {navItems.map((item) => (
                             <li key={item.name}>
-                                <NavLink
-                                    to={item.path}
-                                    onClick={closeMobileMenu}
-                                    className={({ isActive }) =>
-                                        `text-lg font-medium transition-colors duration-200 
-                        hover:border-b-2 hover:border-white pb-1
-                        ${isActive ? 'text-white border-b-2 border-white' : 'text-gray-300 hover:text-white'}`
-                                    }
+                                <button
+                                    onClick={() => scrollToSection(item.id)}
+                                    className="text-lg font-medium transition-colors duration-200 
+                                    hover:border-b-2 hover:border-white pb-1 text-gray-300 hover:text-white w-full text-left"
                                 >
                                     {item.name}
-                                </NavLink>
+                                </button>
                             </li>
                         ))}
                     </ul>

@@ -1,7 +1,7 @@
 const About = () => {
   return (
-    <div>
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1F2B4D] mb-4 sm:mb-6 leading-snug lg:pl-36">
+    <div id="about">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1F2B4D] mb-4 sm:mb-6 leading-snug pl-6 lg:pl-36">
         What are <br />
         <span className="font-normal">we all about?</span>
       </h2>

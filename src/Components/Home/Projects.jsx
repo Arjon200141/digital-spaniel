@@ -47,7 +47,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="px-4 sm:px-8 md:px-16 lg:px-32 xl:px-44 py-20">
+    <div id="work" className="px-4 sm:px-8 md:px-16 lg:px-32 xl:px-44 py-20">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium leading-snug">
           Some of our <br />
@@ -134,7 +134,7 @@ const Projects = () => {
           </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
