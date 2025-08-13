@@ -23,7 +23,6 @@ const Capability = () => {
     return (
         <div id='services' className="py-11 md:py-[52px] bg-[#EDEFF1] text-base-content">
             <div className="flex flex-col md:flex-row justify-between py-8 px-6 sm:px-8 md:px-12 lg:px-[15.625%] gap-y-8 md:gap-y-16">
-                {/* Left Column - Heading and Description */}
                 <aside className="flex flex-col max-w-full md:max-w-xs">
                     <h2
                         className={`text-3xl sm:text-4xl md:text-5xl font-semibold mb-8 md:mb-12 leading-snug transition-colors duration-300 ${activeItem === 'Brand Strategy' ? activeColor : baseHeadingColor}`}
