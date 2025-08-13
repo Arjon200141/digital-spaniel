@@ -1,4 +1,4 @@
-# Digital Spaniel Agency
+# Digital Spaniel
 
 ## Project Overview
 This is a responsive homepage for the Digital Spaniel Agency, built with React and modern frontend technologies. The project implements the design from the provided Adobe XD specification with interactive elements and responsive behavior.
@@ -38,26 +38,7 @@ cd digital-spaniel
 npm install
 npm run dev
 npm run build
-
-
-digital-spaniel/
-├── public/               
-├── src/
-│   ├── assets/           
-│   ├── components/       
-│   ├── features/         
-│   ├── hooks/            
-│   ├── pages/            
-│   ├── store/           
-│   ├── types/            
-│   ├── utils/          
-│   ├── App.tsx           
-│   └── main.tsx        
-├── .eslintrc.cjs        
-├── postcss.config.js     
-├── tailwind.config.js   
-├── tsconfig.json         
-└── vite.config.ts     
+ 
 
 ## State Management
 The project uses Redux Toolkit for global state management with the following features:
