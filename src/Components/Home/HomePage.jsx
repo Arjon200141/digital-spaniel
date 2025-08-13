@@ -12,7 +12,7 @@ const HomePage = () => {
         <div>
             <Navbar></Navbar>
             <Banner></Banner>
-            <div className='lg:h-0 h-[88vh]'></div>
+            <div className='lg:h-0 h-[94.5vh]'></div>
             <Capability></Capability>
             <Projects></Projects>
             <CaseStudy></CaseStudy>
