@@ -13,8 +13,8 @@ const CaseStudy = () => {
       id: 2,
       title: "Lab 02",
       description: "Short project description goes here. To explain what the project is all about.",
-      image1x: "https://i.ibb.co.com/S7s40CvW/image.png",
-      image2x: "https://i.ibb.co.com/S7s40CvW/image.png"
+      image1x: "https://i.ibb.co.com/C3chNd8k/image.png",
+      image2x: "https://i.ibb.co.com/C3chNd8k/image.png"
     },
     {
       id: 3,
@@ -25,10 +25,10 @@ const CaseStudy = () => {
     },
     {
       id: 4,
-      title: "Socks",
+      title: "Lab 02",
       description: "Short project description goes here. To explain what the project is all about.",
-      image1x: "https://i.ibb.co.com/1YcNLGdG/image.png",
-      image2x: "https://i.ibb.co.com/1YcNLGdG/image.png"
+      image1x: "https://i.ibb.co.com/S7s40CvW/image.png",
+      image2x: "https://i.ibb.co.com/S7s40CvW/image.png"
     },
     {
       id: 5,
@@ -56,8 +56,6 @@ const CaseStudy = () => {
       }
     };
   }, []);
-
-  // Get container width on mount and resize
   useEffect(() => {
     const updateWidth = () => {
       if (containerRef.current) {
@@ -85,7 +83,6 @@ const CaseStudy = () => {
     const distance = index - activeIndex;
     const isActive = distance === 0;
 
-    // Calculate position based on distance from active slide
     if (distance === 0) {
       return {
         zIndex: 10,
@@ -132,7 +129,6 @@ const CaseStudy = () => {
         boxShadow: '0 2px 8px rgba(0,0,0,0.05)'
       };
     } else {
-      // Hide slides that are too far away
       return {
         zIndex: 0,
         scale: 0.7,
@@ -145,16 +141,15 @@ const CaseStudy = () => {
   };
 
   return (
-    <div id='blog' className="py-12 bg-white w-full overflow-hidden">
+    <div id='blog' className=" bg-white w-full overflow-hidden">
       <div className=" mx-auto px-4">
-        <h2 className="text-4xl font-medium text-center mb-6">Case Studies</h2>
-        <p className="max-w-2xl mx-auto text-center text-[#506473] px-2 sm:px-6">
+        <h2 className="text-5xl font-bold text-center mb-5 banner2">Case Studies</h2>
+        <p className="max-w-3xl text-xl mx-auto text-center open-sans text-[#506473]  sm:px-6">
           Every project is different. We like to work collaboratively with our clients,
           tailoring each project to suit the needs of you and your business.
         </p>
 
         <div className="relative w-full lg:h-screen h-[65vh] overflow-hidden" ref={containerRef}>
-          {/* Slides Container */}
           <div className="absolute top-1/2 left-1/2 w-full  flex items-center justify-center"
             style={{ transform: 'translate(-50%, -50%)' }}>
 
