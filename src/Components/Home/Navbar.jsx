@@ -39,8 +39,12 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed w-full lg:px-32 px-5 transition-all duration-300 z-50 ${visible ? 'top-0' : '-top-24'}`}>
-            <div className="container px-4 py-3">
+        <nav
+            className={`fixed w-full lg:pl-[8.95%] lg:pr-[10.94%] transition-all duration-300 z-50 ${
+                visible ? 'top-0' : '-top-24'
+            }`}
+        >
+            <div className="container py-3">
                 <div className="flex justify-between items-center">
                     <div>
                         <img
@@ -49,7 +53,7 @@ const Navbar = () => {
                             alt="Digital Spaniel Logo"
                         />
                     </div>
-                    <div className="hidden md:block px-5">
+                    <div className="hidden md:block">
                         <ul className="flex space-x-6 lg:space-x-12">
                             {navItems.map((item) => (
                                 <li key={item.name}>
@@ -98,10 +102,11 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div
-                    className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 py-4' : 'max-h-0'
-                        }`}
+                    className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+                        isOpen ? 'max-h-96 py-4' : 'max-h-0'
+                    }`}
                 >
-                    <ul className="flex flex-col space-y-4 px-2">
+                    <ul className="flex flex-col space-y-4">
                         {navItems.map((item) => (
                             <li key={item.name}>
                                 <button

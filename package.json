@@ -12,6 +12,7 @@
   "dependencies": {
     "@faker-js/faker": "^9.9.0",
     "@reduxjs/toolkit": "^2.8.2",
+    "framer-motion": "^12.23.12",
     "localforage": "^1.10.0",
     "match-sorter": "^8.1.0",
     "react": "^19.1.1",
