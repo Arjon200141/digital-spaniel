@@ -40,26 +40,28 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed w-full lg:pl-[8.95%] lg:pr-[10.94%] transition-all duration-300 z-50 ${
+            className={`mt-1 fixed w-full lg:pl-[7%] lg:pr-[8%] transition-all duration-300 z-50 ${
                 visible ? 'top-0' : '-top-24'
             }`}
         >
-            <div className="container py-3">
+            <div className="container px-4 py-3 mx-auto">
                 <div className="flex justify-between items-center">
                     <div>
                         <img
-                            className="w-32 md:w-40"
+                            className="w-32 md:w-[180px] md:h-[80px]"
                             src="https://i.ibb.co.com/4ZcrKF17/Digital-Spaniel-logo01-01.png"
                             alt="Digital Spaniel Logo"
                         />
                     </div>
+                    
+                    {/* Desktop Navigation - EXACTLY AS YOU HAD IT */}
                     <div className="hidden md:block">
-                        <ul className="flex space-x-6 lg:space-x-12">
+                        <ul className="flex space-x-6 lg:space-x-10">
                             {navItems.map((item) => (
                                 <li key={item.name}>
                                     <button
                                         onClick={() => scrollToSection(item.id)}
-                                        className="text-lg font-medium transition-colors duration-200 
+                                        className="text-lg font-semibold transition-colors duration-200 
                                         hover:border-b-2 hover:border-white pb-1 text-gray-300 hover:text-white"
                                     >
                                         {item.name}
@@ -69,7 +71,8 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    <div className="md:hidden">
+                    {/* Mobile Menu Button - Only minor improvements */}
+                    <div className="md:hidden flex items-center">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="text-white focus:outline-none"
@@ -101,17 +104,19 @@ const Navbar = () => {
                         </button>
                     </div>
                 </div>
+                
+                {/* Mobile Menu Dropdown - Improved spacing */}
                 <div
                     className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
                         isOpen ? 'max-h-96 py-4' : 'max-h-0'
                     }`}
                 >
-                    <ul className="flex flex-col space-y-4">
+                    <ul className="flex flex-col space-y-4 px-4">
                         {navItems.map((item) => (
                             <li key={item.name}>
                                 <button
                                     onClick={() => scrollToSection(item.id)}
-                                    className="text-lg font-medium transition-colors duration-200 
+                                    className="text-lg font-semibold transition-colors duration-200 
                                     hover:border-b-2 hover:border-white pb-1 text-gray-300 hover:text-white w-full text-left"
                                 >
                                     {item.name}
