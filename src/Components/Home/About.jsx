@@ -9,16 +9,16 @@ const About = () => {
           </span>
         </h2>
       </div>
-      <div className="bg-[#F0F3F7] min-h-screen py-10 sm:py-14 md:py-16 lg:py-28 font-sans">
-        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start px-4 sm:px-6 lg:px-[15.625%] gap-6 sm:gap-8 lg:gap-0">
-          <div className="w-full sm:w-5/6 md:w-4/5 lg:w-1/2">
+      <div className="bg-[#F0F3F7] py-12 sm:py-14 md:py-16 lg:py-28 font-sans">
+        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start px-4 sm:px-6 lg:px-[15.625%] ">
+          <div className="w-full">
             <img
               className="w-full h-auto object-cover rounded"
               src="https://i.ibb.co.com/ksFJz0yD/office01.png"
               alt="Office 01"
             />
           </div>
-          <div className="w-full sm:w-5/6 md:w-4/5 lg:w-1/2 grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 lg:gap-1">
+          <div className="w-full grid grid-cols-5">
             <div className="row-span-2 col-span-3">
               <img
                 className="w-full h-full object-cover"
@@ -48,7 +48,7 @@ const About = () => {
         <div className="px-4 sm:px-6 lg:px-[16%] flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 md:gap-6 text-sm sm:text-base md:text-lg font-medium text-[#1F2B4D] mt-6 sm:mt-8 md:mt-10 lg:mt-[-28px]">
           <a
             href="#"
-            className="px-2 font-semibold relative inline-block group"
+            className="px-1 font-semibold relative inline-block group"
           >
             About
             <span
@@ -58,7 +58,7 @@ const About = () => {
           </a>
           <a
             href="#"
-            className="px-2 font-semibold relative inline-block group"
+            className="px-1 font-semibold relative  inline-block group"
           >
             Careers
             <span

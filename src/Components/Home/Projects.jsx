@@ -159,7 +159,7 @@ const Projects = () => {
                   alt={project.title}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                {project.img && (
+                {project.img ==="https://i.ibb.co.com/4Z2dMKh3/newspaper02.png" && (
                   <>
                     <div className="absolute open-sans inset-0 bg-black opacity-0 group-hover:opacity-55 transition-opacity duration-300 z-10"></div>
                     <div className="absolute inset-0 z-20 flex flex-col justify-end p-4 sm:p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">

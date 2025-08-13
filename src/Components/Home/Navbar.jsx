@@ -40,21 +40,19 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`mt-1 fixed w-full lg:pl-[7%] lg:pr-[8%] transition-all duration-300 z-50 ${
-                visible ? 'top-0' : '-top-24'
-            }`}
+            className={`mt-1 fixed w-full lg:pl-[7%] lg:pr-[8%] transition-all duration-300 z-50 ${visible ? 'top-0' : '-top-24'
+                }`}
         >
             <div className="container px-4 py-3 mx-auto">
                 <div className="flex justify-between items-center">
                     <div>
                         <img
-                            className="w-32 md:w-[180px] md:h-[80px]"
+                            className="w-32 md:w-[180px] md:h-[80px] drop-shadow-[1px_1px_0px_rgba(255,255,255,0.5)]"
                             src="https://i.ibb.co.com/4ZcrKF17/Digital-Spaniel-logo01-01.png"
                             alt="Digital Spaniel Logo"
                         />
                     </div>
-                    
-                    {/* Desktop Navigation - EXACTLY AS YOU HAD IT */}
+
                     <div className="hidden md:block">
                         <ul className="flex space-x-6 lg:space-x-10">
                             {navItems.map((item) => (
@@ -104,14 +102,13 @@ const Navbar = () => {
                         </button>
                     </div>
                 </div>
-                
+
                 {/* Mobile Menu Dropdown - Improved spacing */}
                 <div
-                    className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-                        isOpen ? 'max-h-96 py-4' : 'max-h-0'
-                    }`}
+                    className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 py-4' : 'max-h-0'
+                        }`}
                 >
-                    <ul className="flex flex-col space-y-4 px-4">
+                    <ul className="flex flex-col space-y-3 px-4">
                         {navItems.map((item) => (
                             <li key={item.name}>
                                 <button
